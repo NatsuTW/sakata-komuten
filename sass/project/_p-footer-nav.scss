@@ -1,0 +1,67 @@
+@use "../global" as g;
+
+.p-footer-nav {
+  margin-top: 56px;
+}
+
+.p-footer-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include g.mq("tab") {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+
+  @include g.mq("pc") {
+    gap: 49px;
+  }
+}
+
+.p-footer-nav__item {
+  &:not(:last-child) {
+    border-bottom: 1px solid g.$white;
+
+    @include g.mq("tab") {
+      border-bottom: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 16px;
+        background-color: g.$white;
+        position: absolute;
+        top: 50%;
+        right: -17px;
+        translate: 0 -50%;
+      }
+    }
+
+    @include g.mq("pc") {
+      &::after {
+        right: -24px;
+      }
+    }
+  }
+}
+
+.p-footer-nav__link {
+  display: inline-block;
+  color: g.$white;
+  line-height: 1;
+  padding-bottom: 24px;
+  transition: all 0.3s;
+
+  @include g.mq('tab'){
+    padding-bottom: 0;
+  }
+
+  @include g.hover {
+    opacity: 0.7;
+  }
+}

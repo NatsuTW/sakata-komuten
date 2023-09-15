@@ -1,0 +1,22 @@
+// 要素単位
+@function rem($num) {
+  @return calc($num / 16 * 1rem);
+}
+
+@function px($num) {
+  @return calc($num * 1px);
+}
+
+@function em($num) {
+  @return calc($num / 14 * 1em );
+}
+
+// line height
+@function lh($fz, $lineSpace) {
+  @return calc($lineSpace / $fz);
+}
+
+// letter spacing(photoshop)
+@function ls($letterSpace) {
+  @return calc($letterSpace / 1000 * 1em);
+}

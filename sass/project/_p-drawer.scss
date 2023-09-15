@@ -1,0 +1,93 @@
+@use "../global" as g;
+
+.p-drawer {
+  @include g.mq("pc") {
+    display: none;
+  }
+}
+
+.p-drawer__nav {
+  width: 100%;
+  height: calc(100% - 64px);
+  background-color: g.$main-color;
+  text-align: center;
+  padding: 20px 20px;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 200;
+  }
+
+  @include g.mq("pc") {
+    flex-direction: row;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background-color: none;
+    z-index: 1;
+  }
+}
+
+.p-drawer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: opacity 0.4s ease 0s;
+}
+
+.p-drawer__link {
+  display: inline-block;
+  flex-direction: column;
+  color: g.$white;
+  font-size: 16px;
+  padding: 10px;
+  transition: opacity 0.3s;
+
+  @include g.hover {
+    opacity: 0.7;
+  }
+}
+
+.p-drawer__link-en {
+  display: block;
+  color: g.$accent-color;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.p-drawer__btn-wrapper {
+  margin-top: 20px;
+}
+
+.p-drawer__btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  color: g.$white;
+  font-size: 16px;
+  padding: 20px 50px;
+  border: 1px solid g.$white;
+  transition: all 0.3s;
+
+  @include g.hover {
+    color: g.$main-color;
+    background-color: g.$white;
+  }
+}
+
+.p-drawer__btn-en {
+  display: block;
+  color: g.$accent-color;
+  font-size: 12px;
+  margin-top: 5px;
+}

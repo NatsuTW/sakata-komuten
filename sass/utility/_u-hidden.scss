@@ -1,0 +1,23 @@
+@use "../global" as g;
+
+// 非表示
+// PC時に非表示
+.u-hidden-pc {
+	@include g.mq("pc") {
+		display: none;
+	}
+}
+
+// タブレット以上に非表示
+.u-hidden-tab {
+	@include g.mq('tab'){
+		display: none;
+	}
+}
+
+// スマホ時に非表示
+.u-hidden-sp {
+	@include g.mq('sp'){
+		display: none;
+	}
+}

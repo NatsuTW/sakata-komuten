@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+.l-inner {
+  max-width: 520px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: content-box;
+
+  @include g.mq("tab") {
+    max-width: g.px(g.$pc-width);
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.l-inner--header {
+  @extend .l-inner;
+  max-width: 100%;
+
+  @include g.mq('tab'){
+    max-width: g.px(g.$pc-width);
+    padding-right: 20px;
+    padding-left: 20px
+  }
+}

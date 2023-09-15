@@ -1,0 +1,37 @@
+@use "../global" as g;
+
+.c-section-title {
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 19px;
+  position: relative;
+
+  ::after {
+    content: "";
+    width: 64px;
+    height: 1px;
+    background-color: g.$accent-color;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+  }
+}
+
+.c-section-title__jp {
+  font-size: 24px;
+
+  @include g.mq('tab'){
+    font-size: 32px;
+  }
+}
+
+.c-section-title__en {
+  color: g.$main-color;
+  font-size: 14px;
+  margin-top: 3px;
+
+  @include g.mq('tab'){
+    font-size: 16px;
+  }
+}

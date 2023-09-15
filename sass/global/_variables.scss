@@ -1,0 +1,28 @@
+@use "./functions" as g;
+
+// Color
+$main-color: #31452d;
+$accent-color: #b69b04;
+$accent-color-second: #eeead0;
+$text-color: #333333;
+
+$white: #ffffff;
+$black: #333333;
+
+// font
+$font-base: 'Lora', 'Noto Serif JP', serif;
+$font-en: 'Lora', serif;
+$fs-base: 16;
+$fw-base: 400;
+$lh-base: 1;
+
+// layout
+$tab-width: 768;
+$pc-width: 1040;
+
+// Breakpoint
+$breakpoints: (
+  "sp" : "screen and (max-width: #{g.px($tab-width - 1)})",
+  "tab": "screen and (min-width: #{g.px($tab-width)})",
+  "pc": "screen and (min-width: #{g.px($pc-width)})"
+);

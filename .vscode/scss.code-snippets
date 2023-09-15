@@ -1,0 +1,19 @@
+{
+  "mediaQuery": {
+		"scope": "scss",
+    "prefix": ["@mqg"],
+    "body": ["@include g.mq('tab'){",
+"\t$1",
+"}"],
+    "description": "for media query with global variable"
+  },
+
+  "hover": {
+		"scope": "scss",
+    "prefix": ["@hover"],
+    "body": ["@include g.hover {",
+"\t$1",
+"}"],
+    "description": "for hover"
+  },
+}

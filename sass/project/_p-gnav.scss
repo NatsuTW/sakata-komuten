@@ -1,0 +1,73 @@
+@use "../global" as g;
+
+.p-gnav {
+  display: none;
+  height: 100%;
+
+  @include g.mq("pc") {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.p-gnav__list {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.p-gnav__item {
+  border-left: 1px solid g.$black;
+}
+
+.p-gnav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  height: 100%;
+  padding: 0 31px;
+  transition: all 0.3s;
+
+  @media screen and (max-width: 1200px) and (min-width: g.px(g.$tab-width)) {
+    padding: 0 calc(3000 / 1200 * 1vw);
+  }
+
+  @include g.hover {
+    transform: scale(1.1);
+    font-weight: 500;
+  }
+}
+
+.p-gnav__link-en {
+  color: g.$accent-color;
+  font-size: 12px;
+}
+
+.p-gnav__btn-wrapper {
+  width: 168px;
+  height: 100%;
+}
+
+.p-gnav__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: g.$white;
+  text-align: center;
+  background-color: g.$main-color;
+  padding: 10px 30px;
+  transition: all 0.3s;
+
+  @include g.hover {
+    opacity: 0.7;
+  }
+}
+
+.p-gnav__btn-en {
+  color: g.$accent-color;
+  font-size: 12px;
+}

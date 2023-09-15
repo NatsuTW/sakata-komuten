@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+.c-to-top-btn {
+  width: g.rem(40);
+  height: g.rem(40);
+  background-color: g.$main-color;
+  padding: g.rem(8);
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 500;
+  transition: all 0.3s;
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include g.mq("tab") {
+    width: g.rem(50);
+    height: g.rem(50);
+    padding: g.rem(10);
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+  }
+
+  @include g.hover {
+    opacity: 0.7;
+  }
+}
+
+.c-to-top-btn__img {
+  path {
+    fill: g.$white;
+  }
+}

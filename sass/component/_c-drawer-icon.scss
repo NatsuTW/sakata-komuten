@@ -1,0 +1,35 @@
+@use "../global" as g;
+
+.c-drawer-icon {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &.is-open {
+    .bar-one {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .bar-two {
+      display: none;
+    }
+
+    .bar-three {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+
+  @include g.mq('pc'){
+    display: none;
+  }
+}
+
+.c-drawer-icon__bar {
+  width: 100%;
+  height: 2px;
+  background-color: g.$black;
+  transition: transform 0.3s;
+}

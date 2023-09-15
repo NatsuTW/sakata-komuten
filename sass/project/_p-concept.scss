@@ -1,0 +1,95 @@
+@use "../global" as g;
+
+.p-concept__content {
+  margin-top: 24px;
+
+  @include g.mq("tab") {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.p-concept__img {
+  width: 100%;
+
+  @include g.mq("tab") {
+    width: 77.779%;
+    margin-left: -22.223%;
+  }
+}
+
+.p-concept__intro {
+  display: flex;
+  align-items: center;
+  color: g.$white;
+  background-color: g.$main-color;
+  padding-top: 57px;
+  padding-bottom: 57px;
+
+  @include g.mq("tab") {
+    width: 55%;
+    margin-top: 12.778%;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    position: relative;
+    z-index: 2;
+  }
+
+  @include g.mq("pc") {
+    width: 44.445%;
+    padding-top: 59px;
+    padding-bottom: 64px;
+  }
+}
+
+.p-concept__intro-inner {
+  max-width: 520px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include g.mq("tab") {
+    max-width: 100%;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  @include g.mq("pc") {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+
+.p-concept__intro-title {
+  font-size: 20px;
+
+  @include g.mq("tab") {
+    font-size: 22px;
+    line-height: g.lh(24, 36);
+  }
+
+  @include g.mq("pc") {
+    font-size: 24px;
+  }
+}
+
+.p-concept__intro-text {
+  margin-top: 12px;
+  letter-spacing: g.ls(50);
+  line-height: g.lh(16, 32);
+
+  @include g.mq("pc") {
+    line-height: g.lh(16, 40);
+  }
+}
+
+.p-concept__link-wrapper {
+  text-align: right;
+  margin-top: 26px;
+  padding-right: 23px;
+
+  @include g.mq("tab") {
+    margin-top: 20px;
+  }
+}

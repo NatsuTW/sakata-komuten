@@ -1,0 +1,9 @@
+@use "../global" as g;
+
+.l-section {
+  margin-top: 80px;
+
+  @include g.mq('tab'){
+    margin-top: 120px;
+  }
+}
